@@ -2,6 +2,9 @@ from tkinter import *
 import playsound
 import pygame
 
+cal = Tk() # tạo frame cho ứng dụng
+cal.title("Calculator") # Tiêu đề của frame
+
 pygame.init()
 
 sound = pygame.mixer.Sound("beep.wav")
@@ -27,9 +30,6 @@ def button_Equal():
 	# playsound("beep.wav", block=False) # block=False để phát ra âm thanh cùng lúc khi bấm nút
 	result = str(eval(operator)) # Sử dụng eval() để tính một chuỗi biểu thức
 	text_Input.set(result) # Hàm set() để hiển thị trên màn hình 
-
-cal = Tk() # tạo frame cho ứng dụng
-cal.title("Calculator") # Tiêu đề của frame
 
 operator = ""
 text_Input = StringVar() # Phần nhập vào là biến kiểu string
